@@ -1,0 +1,18 @@
+<h1>Messages</h1>
+
+<table>
+  <tr>
+    <th>From</th>
+    <th>To</th>
+    <th>Body</th>
+    <th>Media URL</th>
+  </tr>
+  <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.sender.username %></td>
+      <td><%= message.recipient.username %></td>
+      <td><%= message.body %></td>
+      <td><%= link_to "link", message.media_url %></td>
+    </tr>
+  <% end %>
+</table>

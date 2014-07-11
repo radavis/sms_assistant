@@ -1,0 +1,29 @@
+<h1>New Message</h1>
+
+<%= form_for @message do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being sent:</h2>
+
+      <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :from %>
+  <%= f.collection_select :sender_id, User.all, :id, :username %><br/>
+
+  <%= f.label :to %>
+  <%= f.collection_select :recipient_id, User.all, :id, :username %><br/>
+
+  <%= f.label :body %>
+  <%= f.text_field :body %><br/>
+
+  <%= f.label :media_url %>
+  <%= f.text_field :media_url %><br/>
+
+  <%= f.submit "Send Message" %>
+<% end %>
