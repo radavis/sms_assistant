@@ -15,6 +15,7 @@ gem 'spring',        group: :development
 
 gem 'sidekiq'
 gem 'twilio-ruby'
+gem 'dotenv-rails'
 
 #gem 'haml-rails'
 #gem 'rails'      , '~> 4.0.3'  #  4.0.3 <= version < 4.1
