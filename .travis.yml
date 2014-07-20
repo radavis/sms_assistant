@@ -1,7 +1,12 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 before_script:
-  - cp config/database.example.yml config/database.yml
-  - cp .env.example .env
-  - psql -c 'create database sms_assistant_test;' -U postgres
+- cp config/database.example.yml config/database.yml
+- cp .env.example .env
+- psql -c 'create database sms_assistant_test;' -U postgres
+env:
+  global:
+  - secure: apbpH/ZgvqDellzGi4XHtHaxGaTHcZbyI7GAu5FxLuWfT9Tyt/0OULhpPpTNVX1M3EyfCJjGO+w6MLwH7uiOfGlMokUvK5yLeMIPW/gerhcvWZYCBRJ92/DvTBYXAWm9SbsSwlPL4QjDdbcO0l6TO1U5CrkQGOnBJv6ynx9UY6c=
+  - secure: OWpPY6VmDFR9ivYKt0djd55F9R9AC8zzRFZr/YXZBrwVKBuLxN7q7VbTZg/CDaa7Y6lYnTS/8g/ep7KsA7uW6PGGl22GWOq0FXTtMaB2ESRq704JwmV9dXw/WmhfB/SfqiCm1MvAxB6Suyf8dboS2YiUUTVCJ+iBYWPNTT7tOlk=
+  - secure: EFLPYIDrvtx4yuyh1/Bq7kvzl66MvjiCzr7ZXFufycrtwZQT6o87VTgWrgbNjPh/ipG4IGjWZzyYPomgp+lTKph8MhLJhdTplR54mkV3VbYJXquy7Nm6qu18CVVVuKy+zJE53NUrZIZsq9rE7qqPgl+AArz5R3vMuuxD6jOBbt0=
