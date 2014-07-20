@@ -3,4 +3,5 @@ rvm:
   - 2.0.0
 before_script:
   - cp config/database.example.yml config/database.yml
+  - cp .env.example .env
   - psql -c 'create database sms_assistant_test;' -U postgres
