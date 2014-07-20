@@ -36,6 +36,7 @@ group :test, :development do
   gem 'valid_attribute'
   gem 'webmock'
   gem 'vcr'
+  gem 'coveralls', require: false
 end
 
 group :test do
