@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
+      @message.send_it
       redirect_to messages_path, notice: "Your message to #{@message.recipient.username} has been sent!"
     else
       render :new

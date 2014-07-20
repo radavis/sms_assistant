@@ -5,6 +5,6 @@ class CreateCountries < ActiveRecord::Migration
       t.integer :code, null: false
     end
 
-    add_column :users, :country_id, :integer
+    add_column :users, :country_id, :integer, null: false
   end
 end

@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20140711230235) do
   end
 
   create_table "users", force: true do |t|
-    t.string  "username",   null: false
-    t.string  "phone",      null: false
-    t.integer "country_id"
+    t.string  "username",     null: false
+    t.string  "phone_number", null: false
+    t.integer "country_id",   null: false
   end
 
 end

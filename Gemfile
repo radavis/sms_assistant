@@ -34,6 +34,8 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'valid_attribute'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :test do

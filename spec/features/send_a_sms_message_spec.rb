@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'send a sms message' do
-  scenario 'user sends a message' do
+  scenario 'user sends a message', :vcr do
     message = FactoryGirl.build(:message)
 
     visit new_message_path
