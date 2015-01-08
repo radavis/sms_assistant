@@ -34,11 +34,11 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'valid_attribute'
-  gem 'webmock'
-  gem 'vcr'
   gem 'coveralls', require: false
 end
 
 group :test do
   gem 'database_cleaner'
+  gem 'webmock'
+  gem 'vcr'
 end
