@@ -11,7 +11,9 @@ Experiments with the Twilio API.
 * [worker](https://github.com/radavis/sms_assistant/blob/master/app/workers/sms_worker.rb)
 
 ### Uses the VCR gem to cache HTTP requests when testing
+Simply add `:vcr` to your test.
 * [configuration](https://github.com/radavis/sms_assistant/blob/master/spec/support/vcr.rb)
+* [example](https://github.com/radavis/sms_assistant/blob/refactor_seeder/spec/features/send_a_sms_message_spec.rb)
 
 ### Factories with tests
 * [factories](https://github.com/radavis/sms_assistant/tree/master/spec/factories)
