@@ -1,7 +1,7 @@
-require 'nokogiri'
-require 'open-uri'
-require 'csv'
-require 'pry'
+require "nokogiri"
+require "open-uri"
+require "csv"
+require "pry"
 
 class CountrySeeder
   URL = "http://countrycode.org/"
@@ -29,12 +29,12 @@ class CountrySeeder
   protected
   def retrieve_from_web
     results = {}
-    html = open(URL).read.gsub(/&nbsp;/, ' ')
+    html = open(URL).read.gsub(/&nbsp;/, " ")
     page = Nokogiri::HTML(html)
-    page.css('tr').each do |row|
-      name = row.css('td')[0].try(:text).try(:squish)
-      code = row.css('td')[2].try(:text)
-      if name and name != '' and code and code != ''
+    page.css("tr").each do |row|
+      name = row.css("td")[0].try(:text).try(:squish)
+      code = row.css("td")[2].try(:text)
+      if name and name != "" and code and code != ""
         results[name] = code
       end
     end
@@ -42,7 +42,7 @@ class CountrySeeder
   end
 
   def save_to_file
-    CSV.open(FILENAME, 'wb') do |csv|
+    CSV.open(FILENAME, "wb") do |csv|
       csv << %w(country code)
       @countries.each { |k, v| csv << [k, v] }
     end
@@ -52,8 +52,8 @@ class CountrySeeder
     return unless File.exists?(FILENAME)
     results = {}
     CSV.foreach(FILENAME, headers: true) do |row|
-      country = row['country']
-      code = row['code']
+      country = row["country"]
+      code = row["code"]
       results[country] = code
     end
     @countries = results
