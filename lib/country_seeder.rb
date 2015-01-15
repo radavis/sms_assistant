@@ -33,7 +33,7 @@ class CountrySeeder
     page.css("tr").each do |row|
       name = row.css("td")[0].try(:text).try(:squish)
       code = row.css("td")[2].try(:text)
-      if name and name != "" and code and code != ""
+      if name && name != "" && code && code != ""
         results[name] = code
       end
     end
