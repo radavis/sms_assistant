@@ -17,11 +17,11 @@ Simply add `:vcr` to your test.
 
 ### Factories with tests
 * [factories](https://github.com/radavis/sms_assistant/tree/master/spec/factories)
-* [factory tests](https://github.com/radavis/sms_assistant/blob/master/spec/factories_spec.rb)
+* [factory tests](https://github.com/radavis/sms_assistant/blob/master/spec/support/factories_spec.rb)
 * [rake task](https://github.com/radavis/sms_assistant/blob/master/lib/tasks/factory_specs.rake)
 
-### travis-ci environment variables
+### Travis-CI Environment Variables
 `gem install travis`, then, the following command will allow you to encrypt and add environment variables to the .travis.yml file:
 ```
-travis encrypt ENV_KEY=<value> -r radavis/sms_assistant --add
+travis encrypt ENV_KEY=<value> -r <username>/<repository> --add
 ```
