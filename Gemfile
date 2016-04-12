@@ -32,7 +32,7 @@ group :test, :development do
   gem 'pry-rails'
   gem 'quiet_assets'
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
+  gem 'shoulda'
   gem 'valid_attribute'
   gem 'coveralls', require: false
 end
